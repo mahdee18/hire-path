@@ -1,21 +1,25 @@
 [
     {
-        "logo": "../assets/Icons/accounts 1.png",
+        "id": 1,
+        "logo": "../src/assets/Icons/accounts 1.png",
         "title": "Account & Finance",
         "job_available": "300 Jobs Available"
     },
     {
-        "logo": "../assets/Icons/social-media 1.png",
+        "id": 2,
+        "logo": "../src/assets/Icons/business 1.png",
         "title": "Creative Design",
         "job_available": "100+ Jobs Available"
     },
     {
-        "logo": "../assets/Icons/chip 1.png",
+        "id": 3,
+        "logo": "../src/assets/Icons/social-media 1.png",
         "title": "Marketing & Sales",
         "job_available": "150 Jobs Available"
     },
     {
-        "logo": "https://example.com/logo4.png",
+        "id": 4,
+        "logo": "../src/assets/Icons/chip 1.png",
         "title": "Engineering Job",
         "job_available": "224 Jobs Available"
     }
