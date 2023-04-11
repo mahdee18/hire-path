@@ -60,7 +60,7 @@
         "company_name": "Amazon",
         "remote_or_onsite": "Remote",
         "fulltime_or_parttime": "Full-time",
-        "location": "Anywhere",
+        "location": "California, CA",
         "salary": "$70,000 - $90,000",
         "job_description": "We are looking for a Web Developer to join our team. The ideal candidate will have experience with front-end technologies such as HTML, CSS, and JavaScript, as well as back-end technologies such as PHP and MySQL.",
         "job_responsibility": "Responsibilities include developing and maintaining websites and web applications, working with a team of developers, and troubleshooting issues as they arise.",
@@ -98,13 +98,13 @@
         "fulltime_or_parttime": "Part-time",
         "location": "Chicago, IL",
         "salary": "$30 - $50 per hour",
-        "jobDescription": "We are seeking a talented graphic designer to create engaging designs for our clients.",
-        "jobResponsibility": "Responsibilities include creating designs for web and print, collaborating with clients, and managing project timelines.",
-        "educationalRequirements": "Associate's or bachelor's degree in graphic design or a related field.",
+        "job_description": "We are seeking a talented graphic designer to create engaging designs for our clients.",
+        "job_responsibility": "Responsibilities include creating designs for web and print, collaborating with clients, and managing project timelines.",
+        "educational_requirements": "Associate's or bachelor's degree in graphic design or a related field.",
         "experiences": "At least 2 years of professional experience in graphic design.",
-        "contactInformation": {
-          "phone": "555-9012",
-          "email": "jobs@pqrco.com"
+        "contact_information": {
+            "phone": "555-123-4567",
+            "email": "marketing@marketingco.com"
         }
-      }
+    }
 ]

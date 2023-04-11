@@ -100,7 +100,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-            <button className="w-[145px] h-[55px] flex justify-center items-center font-bold text-[17px] rounded-[8px] text-white bg-purple-600">
+            <button className="w-[145px] h-[55px] flex justify-center items-center font-bold text-[17px] rounded-[8px] text-white  bg-violet-600">
                 <Link>Star Applying</Link>
             </button>
         </nav>
