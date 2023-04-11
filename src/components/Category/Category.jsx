@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import CategoryDetails from '../CategoryDetails/CategoryDetails';
-// import jobCategory from 'hire-path\public\category.json'
 const Category = () => {
     const [jobData, setJobData] = useState([]);
     useEffect(() => {
@@ -17,7 +16,7 @@ const Category = () => {
                 Explore thousands of job opportunities with all the information you
                 need. Its your future
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-6 rounded-lg mt-8 mb-32">
+            <div className="flex flex-wrap justify-center items-center gap-6 rounded-lg mt-8">
                 {jobData.map((data) => (
                     <CategoryDetails key={data.id} data={data} />
                 ))}

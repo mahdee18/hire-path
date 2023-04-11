@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CategoryDetails = ({ data }) => {
-    console.log(data)
     return (
         <div>
             <div className="card w-60 h-auto bg-slate-200 shadow-xl">

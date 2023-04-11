@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "company_logo": "../assets/Logo/google-1-1 1-1.png",
+        "company_logo": "https://pluspng.com/img-png/google-logo-png-google-logo-png-3478.png",
         "job_title": "Technical Database Engineer",
         "company_name": "Google LLC",
         "remote_or_onsite": "Remote",
@@ -19,7 +19,7 @@
     },
     {
         "id": 2,
-        "company_logo": "../assets/Logo/netflix-4 1.png",
+        "company_logo": "https://samupton.com/wp-content/uploads/2019/03/netflix2-1024x294.png",
         "job_title": "Senior Product Designer",
         "company_name": "Netflix",
         "remote_or_onsite": "Onsite",
@@ -37,7 +37,7 @@
     },
     {
         "id": 3,
-        "company_logo": "../assets/Logo/tesla-9 1.png",
+        "company_logo": "https://logos-download.com/wp-content/uploads/2016/03/Tesla_logo_silver.png",
         "job_title": "Software Engineer",
         "company_name": "Tesla",
         "remote_or_onsite": "Onsite",
@@ -55,7 +55,7 @@
     },
     {
         "id": 4,
-        "company_logo": "../assets/Logo/google-1-1 1-1.png",
+        "company_logo": "https://pluspng.com/img-png/google-logo-png-google-logo-png-3478.png",
         "job_title": "Web Developer",
         "company_name": "Google LLC",
         "remote_or_onsite": "Remote",
@@ -73,7 +73,7 @@
     },
     {
         "id": 5,
-        "company_logo": "https://th.bing.com/th/id/R.3e7031297bc7d2319a95ebcd68a5ff4f?rik=sWd%2fDdBr6ufssA&riu=http%3a%2f%2fimg-prod-cms-rt-microsoft-com.akamaized.net%2fcms%2fapi%2fam%2fimageFileData%2fRE4OAgf%3fver%3d6a31&ehk=2w90yyY6PKyD7%2bCnQgIAIj84o6CVkyjAlk37%2bsTRP8Y%3d&risl=&pid=ImgRaw&r=0",
+        "company_logo": "https://logolook.net/wp-content/uploads/2021/06/Microsoft-Logo.png",
         "job_title": "Marketing Coordinator",
         "company_name": "Microsoft",
         "remote_or_onsite": "Onsite",
@@ -91,11 +91,11 @@
     },
     {
         "id": 6,
-        "companyLogo": "https://cfxmagazine.com/wp-content/uploads/2021/11/Meta-Cryptos-Surge-off-the-Back-of-Facebooks-Name-Change.jpg",
-        "jobTitle": "Graphic Designer",
-        "companyName": "Meta",
-        "remoteOrOnsite": "Remote",
-        "fulltimeOrParttime": "Part-time",
+        "company_logo": "https://1000logos.net/wp-content/uploads/2021/10/Meta-Logo.png",
+        "job_title": "Graphic Designer",
+        "company_name": "Meta",
+        "remote_or_onsite": "Remote",
+        "fulltime_or_parttime": "Part-time",
         "location": "Chicago, IL",
         "salary": "$30 - $50 per hour",
         "jobDescription": "We are seeking a talented graphic designer to create engaging designs for our clients.",
