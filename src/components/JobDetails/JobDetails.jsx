@@ -1,11 +1,14 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
-const JobDetails = ({data}) => {
+const JobDetails = () => {
+    const { id } = useParams();
+    const features = useLoaderData();
+    const data = features.find((feature) => feature.id === parseInt(id));
     console.log(data)
     return (
         <div>
-            Job details!!!
+            <p>{data.job_title}</p>
         </div>
     );
 };

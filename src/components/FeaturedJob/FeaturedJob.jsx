@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import JobItem from '../JobItem/JobItem';
 
 const FeaturedJob = () => {
     const [showAll, setShowAll] = useState(false);
     const [job, setJob] = useState([])
+    const navigate = useNavigate();
+
+    const handleViewDetails = (id) => {
+        navigate(`/jobdetails/${id}`);
+    };
     useEffect(() => {
         fetch('jobData.json')
             .then(res => res.json())
@@ -23,7 +28,7 @@ const FeaturedJob = () => {
             </div>
             <div className='w-4/5 mx-auto'>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                    {job.slice(0, showAll ? job.length : 4).map(data => <JobItem key={data.id} data={data}></JobItem>
+                    {job.slice(0, showAll ? job.length : 4).map(data => <JobItem key={data.id} data={data} handleViewDetails={handleViewDetails}></JobItem>
                     )
                     }
                 </div>

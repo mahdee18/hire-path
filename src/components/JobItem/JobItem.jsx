@@ -1,37 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
-const JobItem = ({ data }) => {
-    console.log(data)
-    const { company_logo, job_title, company_name, remote_or_onsite, fulltime_or_parttime, location, salary } = data
+const JobItem = ({ data, handleViewDetails }) => {
+
+    const { id, company_logo, job_title, company_name, remote_or_onsite, fulltime_or_parttime, location, salary } = data
     return (
-        <div className="w-3/4 mx-auto">
-            <div style={{ height: '450px' }} className="card bg-slate-200 shadow-xl">
-                <img src={company_logo} alt="" className="w-2/5 md:w-2/3 pt-2 pl-2 h-2/3" />
-                <div className="card-body flex flex-col">
-                    <div>
-                        <h2 className="card-title text-2xl">{job_title}</h2>
-                        <p className="card-subtitle text-xl py-2">{company_name}</p>
-                        <div className="card-actions flex flex-col md:flex-row">
-                            <button className="btn btn-primary mb-2 md:mr-2 h-10">{remote_or_onsite}</button>
-                            <button className="btn btn-primary h-10">{fulltime_or_parttime}</button>
-                        </div>
-                    </div>
-                    <div className="flex gap-5 items-center">
-                        <span><img src={location} />{location}</span>
-                        <span>{salary}</span>
-                    </div>
-                    <Link to={{
-                        pathname: '/jobDetails',
-                        state: { data }
-                    }}>
-                        <div className="card-actions">
-                            <button className="btn btn-primary h-10">View Details</button>
-                        </div>
-                    </Link>
-
-                </div>
+        <div className='p-8 border rounded'>
+            <img className=' w-1/3' src={company_logo} alt="" />
+            <h2 className='pt-8 text-2xl'>{job_title}</h2>
+            <p className='py-3'>{company_name}</p>
+            <div className='flex'>
+                <p className='border border-2 rounded border-violet-600 me-5
+                 text-violet-500 px-3'>{remote_or_onsite}</p>
+                <p className='border border-2 rounded border-violet-600 
+                 text-violet-500 px-3'>{fulltime_or_parttime}</p>
             </div>
+            <div className='flex my-4'>
+                <p className='me-5'><MapPinIcon className="h-6 w-6 text-violet-400 inline-block" />{location}</p>
+                <p ><CurrencyDollarIcon className="h-6 w-6 text-violet-400 inline-block" />{salary}</p>
+            </div>
+            <Link to={`/jobdetails/${id}`}>
+                <button
+                    onClick={() => {
+                        handleViewDetails(data);
+                    }}
+                    className="px-4 py-2.5 flex justify-center items-center font-bold text-base rounded-[4px] text-white bg-gradient-to-r from-blue-400 to-purple-600 bottom-0 mb-5"
+                >
+                    View Details
+                </button>
+            </Link>
+
+
         </div>
 
     );
