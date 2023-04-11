@@ -12,7 +12,19 @@ const Appliedjobs = () => {
         setJobs(jobsData);
     }, []);
 
+    const handleOnsiteClick = () => {
+        setSelectedButton('onsite');
+        const onsiteJobs = jobs.filter(job => job.remote_or_onsite === 'Onsite');
+        const remoteJobs = jobs.filter(job => job.remote_or_onsite === 'Remote');
+        setJobs([...onsiteJobs, ...remoteJobs]);
+    }
 
+    const handleRemoteClick = () => {
+        setSelectedButton('remote');
+        const remoteJobs = jobs.filter(job => job.remote_or_onsite === 'Remote');
+        const onsiteJobs = jobs.filter(job => job.remote_or_onsite === 'Onsite');
+        setJobs([...remoteJobs, ...onsiteJobs]);
+    }
 
     return (
         <div className='w-4/5 mx-auto relative'>
