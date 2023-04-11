@@ -29,7 +29,7 @@ const FeaturedJob = () => {
                 </div>
                 {!showAll && (
                     <div className='text-center py-12'>
-                        <button className='btn btn-primary' onClick={() => setShowAll(true)}>
+                        <button className='btn btn-primary bg-purple-700 border-0' onClick={() => setShowAll(true)}>
                             See All jobs
                         </button>
                     </div>
