@@ -12,42 +12,47 @@ import Statistic from './components/Statistic/Statistic';
 import Blog from './components/Blog/Blog';
 import Appliedjobs from './components/AppliedJobs/Appliedjobs';
 import JobDetails from './components/JobDetails/JobDetails';
-
+import ErrorPage from './components/ErrorPage/ErrorPage';
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Layout></Layout>,
-    children:[
+    path: '/',
+    element: <Layout></Layout>,
+    children: [
       {
-        path:"/",
-        element:<Home></Home>
+        path: "/",
+        element: <Home></Home>
       },
       {
-        path:"/",
-        element:<Home></Home>,
-        loader:()=>fetch('jobData.json')
-      },      
-      {
-        path:"/jobDetails",
-        element:<JobDetails></JobDetails>,
-        loader:()=>fetch('jobData.json')
-      },      
-      {
-        path:"/statistics",
-        element:<Statistic></Statistic>
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch('jobData.json')
       },
       {
-        path:"/appliedJobs",
-        element:<Appliedjobs></Appliedjobs>
+        path: "/jobDetails",
+        element: <JobDetails></JobDetails>,
+        loader: () => fetch('jobData.json')
       },
       {
-        path:"/blog",
-        element:<Blog></Blog>
+        path: "/statistics",
+        element: <Statistic></Statistic>
       },
-      
+      {
+        path: "/appliedJobs",
+        element: <Appliedjobs></Appliedjobs>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+      },
+      // Add a 404 page route
+      {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
+      }
     ]
   }
 ])
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
