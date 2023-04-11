@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import JobItem from '../JobItem/JobItem';
 
 const FeaturedJob = () => {
+    const [showAll, setShowAll] = useState(false);
     const [job, setJob] = useState([])
     useEffect(() => {
         fetch('jobData.json')
@@ -22,14 +23,17 @@ const FeaturedJob = () => {
             </div>
             <div className='w-4/5 mx-auto'>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                    {
-                        job.map(data => <JobItem key={data.id} data={data}></JobItem>
-                        )
+                    {job.slice(0, showAll ? job.length : 4).map(data => <JobItem key={data.id} data={data}></JobItem>
+                    )
                     }
                 </div>
-                <div className='text-center pt-12'>
-                <button className='btn btn-primary'>See All jobs </button>
-                </div>
+                {!showAll && (
+                    <div className='text-center py-12'>
+                        <button className='btn btn-primary' onClick={() => setShowAll(true)}>
+                            See All jobs
+                        </button>
+                    </div>
+                )}
             </div>
 
         </div>
