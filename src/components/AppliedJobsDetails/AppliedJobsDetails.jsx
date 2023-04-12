@@ -1,32 +1,64 @@
-import React from 'react';
+import React from "react";
 import { CurrencyDollarIcon, MapPinIcon } from '@heroicons/react/24/solid'
+import { Link } from "react-router-dom";
 const AppliedJobsDetails = ({ job }) => {
-    console.log(job.company_name)
-    const { company_logo, job_title, company_name, remote_or_onsite, fulltime_or_parttime, salary, location } = job
+    console.log(job);
+    const {
+        id,
+        company_logo,
+        job_title,
+        company_name,
+        remote_or_onsite,
+        fulltime_or_parttime,
+        salary,
+        location,
+    } = job;
     return (
-        <div>
-            <div className="card card-side bg-base-100 shadow-xl mt-12">
-                <figure><img src={company_logo} className='w-full h-[50px]' /></figure>
-                <div className="card-body relative">
-                    <h2 className="card-title text-2xl">{job_title}</h2>
-                    <h2 className="card-title text-xl">{company_name}</h2>
-                    <div className='flex justify-start w-1/3 gap-5'><span className='px-5 py-2.5 border border-2 rounded border-violet-600
-                 text-violet-500'>{remote_or_onsite}</span>
-                        <span className='border border-2 px-5 py-2.5  rounded border-violet-600 
-                 text-violet-500'>{fulltime_or_parttime}</span></div>
-                    <div className='flex justify-start w-2/4'>
-                        <p className=''><MapPinIcon className="h-6 w-6 text-violet-400 inline-block" />{location}</p>
-                        <p ><CurrencyDollarIcon className="h-6 w-6 text-violet-400 inline-block" />{salary}</p>
+        <div className="flex flex-col mb-6">
+            <div className="relative max-w-full border border-1 border-gray-300 py-4 px-2 sm:py-6 sm:px-4 rounded">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start">
+                    <div className="w-full sm:w-[240px] h-[240px] bg-[#F4F4F4] flex justify-center items-center mb-4 sm:mb-0">
+                        <img className="w-[145px] h-[49px]" src={company_logo} alt="" />
                     </div>
-                    <div className="card-actions bottom-1/2 right-12 absolute">
-                        <button className="btn btn-primary">View Details</button>
+                    <div className="flex flex-col flex-grow ml-0 sm:ml-8">
+                        <h3 className="text-[#474747] font-bold text-xl sm:text-2xl mb-2">
+                            {job_title}
+                        </h3>
+                        <p className="text-[#757575] font-semibold text-lg sm:text-xl mb-2">
+                            {company_name}
+                        </p>
+                        <span className="flex items-center gap-2 mb-2">
+                            <div className="w-[109px] h-[48px] rounded border border-1 border-[#7e90fe] text-[#7e90fe] flex justify-center items-center font-bold text-sm sm:text-base">
+                                {remote_or_onsite}
+                            </div>
+                            <div className="w-[109px] h-[48px] rounded border border-1 border-[#7e90fe] text-[#7e90fe] flex justify-center items-center font-bold text-sm sm:text-base">
+                                {fulltime_or_parttime}
+                            </div>
+                        </span>
+                        <div className="flex items-center gap-2">
+                            <span className="flex items-center">
+                                <MapPinIcon className="h-6 w-6 text-violet-400 inline-block" />
+                                <p className="text-base sm:text-xl">{location}</p>
+                            </span>
+                            <span className="flex items-center">
+                                <CurrencyDollarIcon className="h-6 w-6 text-violet-400 inline-block" />
+                                <p className="text-base sm:text-xl">Salary: {salary}</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
+
+                <Link to={`/jobdetails/${id}`}>
+                    <button className="block mx-auto mt-4 px-4 py-2.5 flex justify-center items-center font-bold text-base rounded-[4px] text-white bg-gradient-to-r from-blue-400 to-purple-600 sm:hidden">
+                        View Details
+                    </button>
+                    <button className="hidden absolute right-0 mr-[47px] top-1/2 px-4 py-2.5 flex justify-center items-center font-bold text-base rounded-[4px] text-white bg-gradient-to-r from-blue-400 to-purple-600 sm:block">
+                        View Details
+                    </button>
+                </Link>
             </div>
-
-
-
         </div>
+
     );
 };
 

@@ -39,11 +39,11 @@ class Statistic extends PureComponent {
                 angle: -90,
                 position: 'insideLeft',
               }}
-              tickFormatter={(value) => `${value}%`}
+              tickFormatter={(value) => `${value}`}
               domain={[0, 100]}
             />
             <Tooltip
-              formatter={(value) => `${value}%`}
+              formatter={(value) => `${value}`}
               labelFormatter={(label) => ` ${label}`}
             />
             <Legend />
