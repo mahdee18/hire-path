@@ -6,7 +6,7 @@ const Header = () => {
             <div class="hero min-h-screen bg-base-200 pt-12">
                 <div class="hero-content flex-col md:flex-row-reverse md:w-3/4 mx-auto">
                     <div className='w-1/2'>
-                    <img src={headerBg} class="w-full md:max-w-sm rounded-lg md:mb-0" />
+                        <img src={headerBg} class="w-full md:max-w-sm rounded-lg md:mb-0" />
                     </div>
                     <div class="text-center md:text-left w-1/2">
                         <h1 class="text-4xl md:text-6xl font-sans mb-4">One Step <br /> Closer To Your <br /> <span className='text-violet-600'>Dream Job</span> </h1>
