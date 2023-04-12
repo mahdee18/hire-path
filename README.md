@@ -1,12 +1,13 @@
-# Website Features
+# The best features of my project.
 
-- featured jobs 
-- single job details page 
-- statistics of assignment
-- applid jobs single page 
-- multiple filters options 
-- show more button
-- article page 
+- Featured jobs 
+- Statistics of assignment
+- Single job details page 
+- Applied jobs single page 
+- Multiple filters options 
+- Show more button
+- Blog page
 
-# Website Live Link
-[job-Mart](https://job-mart.netlify.app/)
+# Project Name : [HirePath]
+
+# Website Live Link: (https://glowing-otter-c2a4b1.netlify.app/)
