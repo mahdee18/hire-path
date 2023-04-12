@@ -9,4 +9,3 @@
 - article page 
 
 # Website Live Link
-[job-Mart](https://job-mart.netlify.app/)
